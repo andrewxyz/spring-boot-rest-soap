@@ -1,0 +1,109 @@
+<xsd:schema elementFormDefault="qualified"
+	targetNamespace="http://ws.andrewxyz.com/authDirect" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="otpRequest">
+		<xsd:annotation>
+			<xsd:documentation />
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element maxOccurs="1" minOccurs="1" name="clientId"
+					type="xsd:string" />
+				<xsd:element maxOccurs="1" minOccurs="1" name="clientPassword"
+					type="xsd:string" />
+				<xsd:element maxOccurs="1" minOccurs="1" name="mobileNumber"
+					type="xsd:string" />
+				<xsd:element maxOccurs="1" minOccurs="1" name="signature"
+					type="xsd:string" />
+				<xsd:element maxOccurs="1" minOccurs="1" name="authMessage"
+					type="xsd:string" />
+				<xsd:element maxOccurs="1" minOccurs="0" name="refId"
+					type="xsd:string" />
+				<xsd:element maxOccurs="1" minOccurs="0" name="authSessionId"
+					type="xsd:string" />
+				<xsd:element maxOccurs="unbounded" minOccurs="0"
+					name="clientData" type="xsd:string" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="otpResponse">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element maxOccurs="1" minOccurs="0" name="authSessionId"
+					type="xsd:string" />
+				<xsd:element maxOccurs="1" minOccurs="1" name="responseCode"
+					type="xsd:string" />
+				<xsd:element maxOccurs="1" minOccurs="1" name="responseMsg"
+					type="xsd:string" />
+				<xsd:element maxOccurs="1" minOccurs="0" name="resendOtpLeft"
+					type="xsd:int" />
+				<xsd:element maxOccurs="1" minOccurs="0" name="refId"
+					type="xsd:string" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="authRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element maxOccurs="1" minOccurs="1" name="authSessionId"
+					type="xsd:string" />
+				<xsd:element maxOccurs="1" minOccurs="1" name="clientId"
+					type="xsd:string" />
+				<xsd:element maxOccurs="1" minOccurs="1" name="clientPassword"
+					type="xsd:string" />
+				<xsd:element maxOccurs="1" minOccurs="1" name="otpValue"
+					type="xsd:string" />
+				<xsd:element maxOccurs="1" minOccurs="1" name="signature"
+					type="xsd:string" />
+				<xsd:element maxOccurs="1" minOccurs="0" name="refId"
+					type="xsd:string" />
+				<xsd:element maxOccurs="unbounded" minOccurs="0"
+					name="clientData" type="xsd:string" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="authResponse">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element maxOccurs="1" minOccurs="0" name="authSessionId"
+					type="xsd:string" />
+				<xsd:element maxOccurs="1" minOccurs="1" name="responseCode"
+					type="xsd:string" />
+				<xsd:element maxOccurs="1" minOccurs="1" name="responseMsg"
+					type="xsd:string" />
+				<xsd:element maxOccurs="1" minOccurs="0" name="authAttemptLeft"
+					type="xsd:int" />
+				<xsd:element maxOccurs="1" minOccurs="0" name="refId"
+					type="xsd:string" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="clientAuthRequest">
+		<xsd:annotation>
+			<xsd:documentation />
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element maxOccurs="1" minOccurs="1" name="clientId"
+					type="xsd:string" />
+				<xsd:element maxOccurs="1" minOccurs="1" name="clientPassword"
+					type="xsd:string" />
+				<xsd:element maxOccurs="1" minOccurs="0" name="authSessionId"
+					type="xsd:string" />
+				<xsd:element maxOccurs="1" minOccurs="0" name="signature"
+					type="xsd:string" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="clientAuthResponse">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element maxOccurs="1" minOccurs="0" name="authSessionId"
+					type="xsd:string" />
+				<xsd:element maxOccurs="1" minOccurs="1" name="responseCode"
+					type="xsd:string" />
+				<xsd:element maxOccurs="1" minOccurs="1" name="responseMsg"
+					type="xsd:string" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

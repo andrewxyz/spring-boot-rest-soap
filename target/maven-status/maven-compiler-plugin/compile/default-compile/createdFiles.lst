@@ -1,0 +1,12 @@
+com\andrewxyz\config\WebServiceConfig.class
+com\andrewxyz\ws\authdirect\ObjectFactory.class
+com\andrewxyz\ws\authdirect\OtpRequest.class
+com\andrewxyz\Application.class
+com\andrewxyz\soap\endpoint\AuthServiceEndpoint.class
+com\andrewxyz\ws\authdirect\package-info.class
+com\andrewxyz\rest\SampleRestController.class
+com\andrewxyz\ws\authdirect\AuthRequest.class
+com\andrewxyz\ws\authdirect\AuthResponse.class
+com\andrewxyz\ws\authdirect\ClientAuthResponse.class
+com\andrewxyz\ws\authdirect\ClientAuthRequest.class
+com\andrewxyz\ws\authdirect\OtpResponse.class
